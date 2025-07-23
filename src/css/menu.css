@@ -1,0 +1,131 @@
+/* Estilo base (desktop) */
+.menu-nav {
+    position: relative;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.menu-btn {
+    display: none;
+    cursor: pointer;
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    z-index: 30;
+}
+
+/* Ícone do hamburguer */
+.hamburguer,
+.hamburguer::before,
+.hamburguer::after {
+    content: "";
+    background-color: #fff;
+    display: block;
+    height: 4px;
+    width: 30px;
+    border-radius: 2px;
+    position: absolute;
+    transition: 0.3s ease-in-out;
+}
+
+.hamburguer {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.hamburguer::before {
+    top: -10px;
+}
+
+.hamburguer::after {
+    bottom: -10px;
+}
+
+/* Animação para virar X */
+.menu-toggle:checked+.menu-btn .hamburguer {
+    transform: rotate(45deg);
+}
+
+.menu-toggle:checked+.menu-btn .hamburguer::before {
+    transform: rotate(90deg);
+    top: 0;
+}
+
+.menu-toggle:checked+.menu-btn .hamburguer::after {
+    transform: rotate(90deg);
+    bottom: 0;
+}
+
+/* Estilo para desktop */
+.menu-list {
+    display: flex;
+    gap: 3rem;
+    list-style: none;
+    align-items: center;
+}
+
+.menu-list li a {
+    text-decoration: none;
+    font-size: 1.6rem;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.menu-list li a:hover {
+    color: #ff2025;
+}
+
+.menu-list .btn-contato {
+    background-color: #ff2025;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    font-weight: bold;
+}
+
+/* RESPONSIVO */
+@media (max-width: 900px) {
+    .menu-btn {
+        display: block;
+    }
+
+    .menu-list {
+        display: none;
+        flex-direction: column;
+        background-color: #111;
+        position: fixed; /* Alterado para fixed */
+        top: 0; /* Alterado para 0 */
+        right: -100%; /* Começa fora da tela */
+        width: 100%; /* Ocupa a tela inteira */
+        height: 100vh; /* Ocupa a altura inteira */
+        padding: 2rem;
+        z-index: 20;
+        transition: right 0.3s ease-in-out; /* Adiciona transição */
+        justify-content: center; /* Centraliza os itens */
+        align-items: center; /* Centraliza os itens */
+    }
+
+    .menu-toggle:checked~.menu-list {
+        display: flex;
+        right: 0; /* Move para dentro da tela */
+    }
+
+    .menu-list li {
+        margin: 1rem 0;
+    }
+
+    .menu-list li a {
+        text-align: center;
+        padding: 1rem;
+        color: white;
+        width: 100%;
+        display: block;
+    }
+
+    .menu-list .btn-contato {
+        background-color: #ff2025;
+    }
+}

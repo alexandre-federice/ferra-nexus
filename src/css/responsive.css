@@ -1,0 +1,191 @@
+/* Estilos para telas de até 1440px */
+@media (max-width: 1440px) {
+    /* 
+    Ajusta o tamanho da fonte base para telas um pouco menores.
+    Isso ajuda a manter a proporção dos elementos.
+    */
+    html {
+        font-size: 58%;
+    }
+
+    /* 
+    Reduz o espaçamento lateral no cabeçalho para economizar espaço.
+    */
+    .header-container {
+        margin-left: 5rem;
+        margin-right: 5rem;
+    }
+}
+
+/* Estilos para telas de até 1280px */
+@media (max-width: 1280px) {
+    /* 
+    Reduz o tamanho da fonte do título principal para evitar quebras de linha indesejadas.
+    */
+    .main-container h1 {
+        font-size: 6rem;
+    }
+
+    /* 
+    Ajusta a posição da imagem do homem na seção principal.
+    */
+    .homem {
+        right: -5rem;
+    }
+
+    /* 
+    Reduz o espaçamento na seção de produtos.
+    */
+    .produtos {
+        padding: 5rem;
+    }
+}
+
+/* Estilos para telas de até 1024px (Tablets em modo paisagem) */
+@media (max-width: 1024px) {
+    /* 
+    Ajusta o layout da seção principal para empilhar os elementos verticalmente.
+    */
+    .main {
+        flex-direction: column;
+        height: auto;
+        padding-bottom: 5rem;
+    }
+
+    /* 
+    Centraliza o texto na seção principal.
+    */
+    .main-container {
+        margin: 5rem;
+        text-align: center;
+    }
+
+    /* 
+    Ajusta a imagem do homem para ocupar a largura total.
+    */
+    .main-imagem {
+        justify-content: center;
+        margin-top: 3rem;
+    }
+
+    .homem {
+        position: static;
+        width: 80%;
+        height: auto;
+    }
+
+    /* 
+    Ajusta a seção de produtos para empilhar os elementos.
+    */
+    .produtos {
+        flex-direction: column;
+        height: auto;
+    }
+
+    /* 
+    Centraliza o conteúdo da seção de produtos.
+    */
+    .info-container {
+        margin: 5rem;
+        text-align: center;
+    }
+
+    /* 
+    Ajusta o grid de ferramentas para ter apenas uma coluna.
+    */
+    .ferramentas-container {
+        grid-template-columns: 1fr;
+        transform: translateX(0);
+        margin-top: 5rem;
+    }
+}
+
+/* Estilos para telas de até 768px (Tablets em modo retrato) */
+@media (max-width: 768px) {
+    /* 
+    Reduz ainda mais o tamanho da fonte base.
+    */
+    html {
+        font-size: 50%;
+    }
+
+    /* 
+    Oculta o menu de navegação principal para dar lugar ao menu hambúrguer.
+    */
+    .header-container nav ul {
+        display: none;
+    }
+
+    /* 
+    Mostra o botão do menu hambúrguer.
+    */
+    .menu-btn {
+        display: block;
+    }
+
+    /* 
+    Ajusta o layout da seção "Sobre".
+    */
+    .sobre-conteudo {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .info-sobre, .ferra-nexus {
+        width: 100%;
+        margin: 0;
+        padding: 5rem;
+        text-align: center;
+    }
+
+    /* 
+    Ajusta a seção de localização.
+    */
+    .localizacao {
+        flex-direction: column;
+        height: auto;
+        padding: 5rem 0;
+    }
+
+    .info-localizacao, .maps-localizacao {
+        width: 100%;
+        padding: 5rem;
+        margin: 0;
+        text-align: center;
+    }
+
+    /* 
+    Ajusta o grid de contatos para ter apenas uma coluna.
+    */
+    .bloco-contato {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Estilos para telas de até 480px (Smartphones) */
+@media (max-width: 480px) {
+    /* 
+    Ajusta o tamanho da fonte do título principal para telas pequenas.
+    */
+    .main-container h1 {
+        font-size: 4rem;
+    }
+
+    /* 
+    Reduz o tamanho do título na seção "Sobre".
+    */
+    .mercado-livre h2 {
+        font-size: 3rem;
+    }
+
+    /* 
+    Ajusta o tamanho do título no rodapé.
+    */
+    .titulo-footer h2 {
+        font-size: 6rem;
+    }
+
+    .titulo-footer h3 {
+        font-size: 3rem;
+    }
+}
