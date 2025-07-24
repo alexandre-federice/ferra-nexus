@@ -570,7 +570,13 @@ MUDANÇA DE LAYOUT - Mobile (a partir de 768px)
     }
 
     .header-container {
-        margin: 1.5rem;
+        justify-content: flex-start;
+        align-items: center;
+        /* margin: 1.5rem; */
+    }
+
+    .main {
+        height: 100%;
     }
 
     .main-container h1 {
@@ -588,9 +594,6 @@ MUDANÇA DE LAYOUT - Mobile (a partir de 768px)
 
     .main-imagem {
         height: auto;
-        /* Alterado de altura fixa para auto */
-        min-height: 200px;
-        /* Garante um espaço mínimo para o homem */
     }
 
     .ingco h2 {
@@ -616,8 +619,30 @@ MUDANÇA DE LAYOUT - Mobile (a partir de 768px)
         overflow: hidden;
     }
 
+    .mercado-livre {
+        padding: 4rem;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+    }
+
+    .mercado-livre a {
+        font-size: 2rem;
+    }
+
+    .mercado-livre h3 {
+        font-size: 2.3rem;
+    }
+
+    .mercado-livre h2 {
+        font-size: 2.1rem;
+        text-align: center;
+        text-shadow: none;
+    }
+
     .info-sobre h2 {
-        font-size: 3rem;
+        font-size: rem;
     }
 
     .info-sobre h3 {
@@ -638,6 +663,7 @@ MUDANÇA DE LAYOUT - Mobile (a partir de 768px)
 
     .info-localizacao h2 {
         font-size: 3.5rem;
+        text-shadow: none;
     }
 
     .info-localizacao p {
@@ -652,12 +678,24 @@ MUDANÇA DE LAYOUT - Mobile (a partir de 768px)
         height: 200px;
     }
 
+    .contato {
+        padding: 0;
+    }
+
     .titulo-footer h2 {
         font-size: 4rem;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+    }
+
+    .texto-footer {
+        margin-bottom: 0;
     }
 
     .titulo-footer h3 {
-        font-size: 2rem;
+        font-size: 20px;
+        margin-bottom: 3rem;
     }
 
     .bloco-contato {
@@ -670,7 +708,7 @@ MUDANÇA DE LAYOUT - Mobile (a partir de 768px)
 
     .voltar-ao-topo {
         bottom: 7rem;
-        right: 5rem;
+        right: 2rem;
     }
 
     .voltar-ao-topo img {
@@ -680,8 +718,8 @@ MUDANÇA DE LAYOUT - Mobile (a partir de 768px)
 
     .voltar-ao-topo span {
         position: absolute;
-        font-size: 1.2rem;
+        font-size: 12px;
         margin-top: 0;
-        margin-bottom: 1rem;
+        bottom: 5rem;
     }
 }

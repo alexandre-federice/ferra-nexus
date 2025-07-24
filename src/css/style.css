@@ -412,7 +412,6 @@ header {
     font-weight: 400;
     margin-bottom: 1rem;
     font-family: 'Codec-Título', sans-serif;
-    text-shadow: 5px 5px 10px rgba(255, 255, 255, 0.5);
 }
 
 .sobre-conteudo {
@@ -533,7 +532,6 @@ header {
     font-weight: 600;
     margin-bottom: 5rem;
     text-align: start;
-    text-shadow: 5px 5px 20px rgba(255, 255, 255, 0.6);
 }
 
 .info-localizacao p {
