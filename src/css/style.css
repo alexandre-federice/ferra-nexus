@@ -31,7 +31,7 @@ header {
     background-color: #b60508;
     background: linear-gradient(90deg, rgba(182, 5, 8, 1) 0%, rgba(66, 1, 2, 1) 59%, rgba(51, 0, 1, 1) 100%);
     height: 10rem;
-    border-bottom: 5px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 5px groove rgba(255, 255, 255, 0.8);
 }
 
 /* cabeçalho */
@@ -41,8 +41,8 @@ header {
     align-items: center;
     width: 100%;
     height: 10rem;
-    margin-left: 10rem;
-    margin-right: 10rem;
+    margin-left: 20rem;
+    margin-right: 20rem;
 }
 
 /* Logo e Nome do Site */
@@ -151,26 +151,27 @@ header {
 /* H1 e Texto Principal */
 .main-container {
     flex: 1;
-    margin: 10rem;
+    margin: 10rem 0 0 20rem;
 }
 
 /* H1 do Main */
 .main-container h1 {
-    font-size: 7rem;
+    font-size: 7.5rem;
     color: #ffffff;
-    margin-bottom: 1rem;
-    width: 50rem;
+    margin-bottom: 3rem;
+    max-width: 50rem;
     font-family: 'Codec-Título', sans-serif;
 }
 
 /* p do Main */
 .main-container p {
-    font-size: 1.9rem;
+    font-size: 2.3rem;
     color: #ffffff;
     text-align: start;
-    max-width: 60rem;
-    line-height: 1.5;
+    max-width: 50rem;
+    line-height: 1.7;
     margin-bottom: 5rem;
+    text-align: justify;
 }
 
 .main-container a img {
@@ -199,6 +200,7 @@ header {
 
 .main-container a:hover {
     background-color: #b60508;
+    transform: scale(1.05);
 }
 
 .main-imagem {
@@ -297,7 +299,6 @@ header {
     line-height: 1.5;
     text-align: justify;
     max-width: 55rem;
-    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* TEXTO INGCO DESTACADO */
@@ -316,8 +317,7 @@ header {
     position: relative;
     padding-left: 5rem;
     margin-bottom: 1.5rem;
-    font-size: 2rem;
-    color: #000;
+    font-size: 2.3rem;
     line-height: 1.4;
 }
 
@@ -340,6 +340,7 @@ header {
     gap: 5rem 5rem;
     /* max-width: 50rem; */
     transform: translateX(-20rem);
+    margin-right: 5rem;
 }
 
 .ferramenta {
@@ -413,6 +414,7 @@ header {
 
 .mercado-livre a:hover {
     background-color: #b60508;
+    transform: scale(1.05);
 }
 
 .mercado-livre a img {
@@ -725,11 +727,13 @@ header {
 .social-footer a i {
     font-size: 4rem;
     color: #000000;
-    transition: color 0.3s ease-in-out;
+    transition: color 0.1s ease;
 }
 
 .social-footer a:hover i {
     color: #ff2025;
+    transform: scale(1.3);
+    cursor: pointer;
 }
 
 /* ASSINATURA DO SITE */
