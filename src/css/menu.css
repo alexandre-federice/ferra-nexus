@@ -96,33 +96,46 @@
         display: none;
         flex-direction: column;
         background-color: #111;
-        position: fixed; /* Alterado para fixed */
-        top: 0; /* Alterado para 0 */
-        right: -100%; /* Começa fora da tela */
-        width: 100%; /* Ocupa a tela inteira */
-        height: 100vh; /* Ocupa a altura inteira */
+        position: fixed;
+        /* Alterado para fixed */
+        top: 0;
+        /* Alterado para 0 */
+        right: -100%;
+        /* Começa fora da tela */
+        width: 100%;
+        /* Ocupa a tela inteira */
+        height: 100vh;
+        /* Ocupa a altura inteira */
         padding: 2rem;
         z-index: 20;
-        transition: right 0.3s ease-in-out; /* Adiciona transição */
-        justify-content: center; /* Centraliza os itens */
-        align-items: center; /* Centraliza os itens */
+        transition: right 0.5s ease-in-out;
+        /* Adiciona transição */
+        justify-content: center;
+        /* Centraliza os itens */
+        align-items: center;
+        /* Centraliza os itens */
     }
 
     .menu-toggle:checked~.menu-list {
         display: flex;
-        right: 0; /* Move para dentro da tela */
+        right: 0;
+        /* Move para dentro da tela */
     }
 
     .menu-list li {
         margin: 1rem 0;
+        
     }
 
     .menu-list li a {
         text-align: center;
-        padding: 1rem;
+        padding: 5rem;
         color: white;
         width: 100%;
         display: block;
+        font-size: 24px !important;
+        
+        
     }
 
     .menu-list .btn-contato {

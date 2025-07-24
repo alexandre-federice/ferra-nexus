@@ -78,7 +78,7 @@
     }
 
     .homem {
-        height: 80%;
+        height: 100%;
         /* Apenas reduz a altura, sem mexer na posição */
     }
 
@@ -278,7 +278,7 @@ MUDANÇA DE LAYOUT - Mobile (a partir de 768px)
 ========================================================================== */
 @media (max-width: 768px) {
     html {
-        font-size: 50%;
+        font-size: 45%;
     }
 
     section {
@@ -307,13 +307,19 @@ MUDANÇA DE LAYOUT - Mobile (a partir de 768px)
 
     .menu-btn {
         display: block;
+        margin-top: 1rem;
+        margin-right: 1rem;
     }
 
     /* --- PRINCIPAL --- */
     .main {
         display: flex;
         flex-direction: column;
-        padding: 4rem 2rem;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+        padding: 0;
+        /* ou 100vh se quiser forçar tela cheia */
     }
 
     .main::after {
@@ -321,21 +327,26 @@ MUDANÇA DE LAYOUT - Mobile (a partir de 768px)
     }
 
     .main-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+        max-width: 80%;
         width: 100%;
-        /* Garante que o contêiner ocupe toda a largura */
-        margin: 0 auto;
-        /* Centraliza o contêiner */
         text-align: center;
-        /* Centraliza o texto dentro do contêiner */
+        margin: 2rem;
     }
 
     .main-container h1 {
-        font-size: 5rem;
+        width: 100%;
+        text-align: center;
+        font-size: 7rem;
         margin-bottom: 5rem;
     }
 
     .main-container p {
-        font-size: 1.8rem;
+        font-size: 2.2rem;
         max-width: 90%;
         margin: 0 auto;
         margin-bottom: 5rem;
@@ -343,14 +354,11 @@ MUDANÇA DE LAYOUT - Mobile (a partir de 768px)
     }
 
     .main-imagem {
-        order: 2;
         position: relative;
         width: 100%;
-        height: auto;
-        /* Alterado de altura fixa para auto */
-        min-height: 250px;
-        /* Garante um espaço mínimo para o homem */
-        margin-top: 3rem;
+        height: 300px;
+        /* IMPORTANTE: precisa existir para que a .homem apareça */
+        margin-top: 2rem;
     }
 
     .homem {
@@ -358,19 +366,19 @@ MUDANÇA DE LAYOUT - Mobile (a partir de 768px)
         bottom: 0;
         right: 0;
         height: 100%;
-        /* Ocupa a altura do main-imagem */
-        width: auto;
-        max-width: 100%;
         object-fit: contain;
+        max-width: 100%;
     }
 
     .luz-fundo {
         position: absolute;
-        bottom: 0;
-        right: 0;
-        height: 100%;
-        width: auto;
-        transform: translate(20%, 20%) scale(1.5);
+        top: 0;
+        left: 0;
+        width: 150%;
+        height: auto;
+        z-index: -1;
+        opacity: 0.5;
+        transform: translate(-20%, -20%);
     }
 
     /* --- PRODUTOS --- */
@@ -424,8 +432,13 @@ MUDANÇA DE LAYOUT - Mobile (a partir de 768px)
     }
 
     .sobre-conteudo {
+        display: flex;
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
         padding: 4rem 2rem;
+        height: auto;
+        /* Garante que o contêiner se expanda */
     }
 
     .info-sobre,
@@ -433,6 +446,8 @@ MUDANÇA DE LAYOUT - Mobile (a partir de 768px)
         max-width: 90%;
         margin: 0 auto;
         text-align: center;
+        justify-content: center;
+        align-items: center;
     }
 
     .info-sobre h2 {
@@ -444,7 +459,15 @@ MUDANÇA DE LAYOUT - Mobile (a partir de 768px)
     }
 
     .info-sobre p {
-        font-size: 1.6rem;
+        font-size: 1.9rem;
+    }
+
+    .info-sobre ul li {
+        text-align: left;
+    }
+
+    .info-sobre strong {
+        font-size: 2.9rem;
     }
 
     .ferra-nexus {
@@ -505,6 +528,21 @@ MUDANÇA DE LAYOUT - Mobile (a partir de 768px)
 
     .titulo-footer h3 {
         font-size: 2.5rem;
+    }
+
+    /* --- AJUSTE BOTÃO VOLTAR AO TOPO --- */
+    .voltar-ao-topo {
+        right: 3rem;
+        bottom: 5rem;
+        /* Aumentado para subir o botão */
+        font-size: 1.4rem;
+        /* Reduzindo a fonte */
+    }
+
+    .voltar-ao-topo img {
+        width: 40px;
+        /* Reduzindo a imagem */
+        height: 40px;
     }
 }
 
@@ -571,6 +609,13 @@ MUDANÇA DE LAYOUT - Mobile (a partir de 768px)
         height: 10rem;
     }
 
+    .sobre {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        overflow: hidden;
+    }
+
     .info-sobre h2 {
         font-size: 3rem;
     }
@@ -621,5 +666,22 @@ MUDANÇA DE LAYOUT - Mobile (a partir de 768px)
 
     .item-contato p {
         font-size: 1.6rem;
+    }
+
+    .voltar-ao-topo {
+        bottom: 7rem;
+        right: 5rem;
+    }
+
+    .voltar-ao-topo img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .voltar-ao-topo span {
+        position: absolute;
+        font-size: 1.2rem;
+        margin-top: 0;
+        margin-bottom: 1rem;
     }
 }

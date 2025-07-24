@@ -9,4 +9,21 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     });
+
+    // Lógica para o botão Voltar ao Topo
+    const voltarAoTopoBtn = document.querySelector('.voltar-ao-topo');
+    const contatoSection = document.querySelector('.contato');
+
+    if (voltarAoTopoBtn && contatoSection) {
+        window.addEventListener('scroll', function() {
+            const contatoPosition = contatoSection.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+
+            if (contatoPosition < windowHeight) {
+                voltarAoTopoBtn.classList.add('visible');
+            } else {
+                voltarAoTopoBtn.classList.remove('visible');
+            }
+        });
+    }
 });
